@@ -22,4 +22,4 @@ The facial landmark detector included in the dlib library  which uses pretrained
 
 ![Facial landmarks](Images/facial_landmarks_68markup.jpg =100x50) 
 
-<img src="Images/facial_landmarks_68markup.jpg" alt="facial landmarks" width="500"/> {text-allign: center}
+<img src="Images/facial_landmarks_68markup.jpg" alt="facial landmarks" width="500" text-allign: center/> {}

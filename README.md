@@ -20,6 +20,14 @@ Step #2: Detect the key facial structures on the face ROI.
 
 The facial landmark detector included in the dlib library  which uses pretrained regression trees
 
-![Facial landmarks](Images/facial_landmarks_68markup.jpg =100x50) 
 
+<p align="center">
 <img src="Images/facial_landmarks_68markup.jpg" alt="facial landmarks" width="500" class="center"/> 
+</p>
+
+
+
+
+
+
+![Facial landmarks](Images/facial_landmarks_68markup.jpg) 

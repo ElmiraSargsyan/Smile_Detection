@@ -18,7 +18,6 @@ Step #2: Detect the key facial structures on the face ROI.
 	Nose
 	Jaw
 
-The facial landmark detector included in the dlib library  which uses pretrained regression 
+The facial landmark detector included in the dlib library  which uses pretrained regression trees
 
-
-treeshttps://www.pyimagesearch.com/wp-content/uploads/2017/04/facial_landmarks_68markup-768x619.jpg
+https://www.pyimagesearch.com/wp-content/uploads/2017/04/facial_landmarks_68markup-768x619.jpg

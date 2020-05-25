@@ -20,4 +20,4 @@ Step #2: Detect the key facial structures on the face ROI.
 
 The facial landmark detector included in the dlib library  which uses pretrained regression trees
 
-https://www.pyimagesearch.com/wp-content/uploads/2017/04/facial_landmarks_68markup-768x619.jpg
+![Facial landmarks](facial_landmarks_68markup.jpg) 

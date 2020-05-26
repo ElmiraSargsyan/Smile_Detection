@@ -9,6 +9,7 @@ Dlib is not compatible with python 3.7
  
  
 Step #1: Localize the face in the image.
+
 Step #2: Detect the key facial structures on the face ROI.
 	Mouth
 	Right eyebrow
@@ -25,9 +26,23 @@ The facial landmark detector included in the dlib library  which uses pretrained
 <img src="Images/facial_landmarks_68markup.jpg" alt="facial landmarks" width="500" class="center"/> 
 </p>
 
+From the image, can be seen that facial regions can be accessed via simple Python indexing (the image above is one-indexed):
+
+- The mouth can be accessed through points [48, 68].
+- The right eye can be accessed through points [36, 42].
+- The left eye can be accessed through points [42, 48].
+
+
+____
+For smile detection I considered only the following 20 coordinates from facial landmarks.
+
+<p align="center">
+<img src="Images/mouth.png" alt="mouth landmarks" width="200" class="center"/> 
+</p>
+
+For detecting whether person is smiling or not for every frame Mouth Aspect Ration(MAT) is calculated, where
+
+$$ MAT = \frac {||P_{59} - P_{51} || + ||P_{58} - P_{52} || + ||P_{57} - P_{53} ||}{3||P_{49} - P_{51} ||}
 
 
 
-
-
-![Facial landmarks](Images/facial_landmarks_68markup.jpg) 

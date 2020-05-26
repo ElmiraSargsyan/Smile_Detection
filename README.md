@@ -42,7 +42,7 @@ For smile detection I considered only the following 20 coordinates from facial l
 
 For detecting whether person is smiling or not for every frame Mouth Aspect Ration(MAT) is calculated, where
 
-$$ MAT = \frac {||P_{59} - P_{51} || + ||P_{58} - P_{52} || + ||P_{57} - P_{53} ||} {3||P_{49} - P_{51} ||} $$
+$$ MAT = \frac {\mathbf{P_{59} - P_{51} } + ||P_{58} - P_{52} || + ||P_{57} - P_{53} ||} {3||P_{49} - P_{51} ||} $$
 
 
 

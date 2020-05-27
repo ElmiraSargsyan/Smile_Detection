@@ -31,7 +31,7 @@ From the image, can be seen that facial regions can be accessed via simple Pytho
 
 
 ____
-### detecting smile
+### Detecting smile
 
 For smile detection I considered only the following 20 coordinates from facial landmarks.
 
@@ -45,13 +45,13 @@ Consequentely for detecting whether person is smiling or not I used the followin
 
 
 Let's suppose \
-	`a1` is the midpoint of 49th and 55th landmark points  \
-	`a2` is the midpoint of 6 mouth landmarks of the center of the mouth (62, 63, 64, 66, 67, 68)  \
-	`n` is one of the points on the nose, particularly, I set n equal to the 34th point   \
+- `a1` is the midpoint of 49th and 55th landmark points  \
+- `a2` is the midpoint of 6 mouth landmarks of the center of the mouth (62, 63, 64, 66, 67, 68)  \
+- `n` is one of the points on the nose, particularly, I set n equal to the 34th point   
 	
 	
 <p align="center">
-<img src="Images/mouth_and_nose.jpg" alt="mouth and nose landmarks" width="500" class="center"/> 
+<img src="Images/mouth_and_nose.jpg" alt="mouth and nose landmarks" width="400" class="center"/> 
 </p>
 
 if the ditance between `a1` and `n` is greater than the distance between `a2` and `b`, person is smiling. \
@@ -60,6 +60,7 @@ in `detect_smile()` function threshold is added for higher accuracy
 
 
 ____
+### Checking eyes
 
 For checking the eyes are open or not I used Eye Aspect Ratio(EAR) from the ["Real-Time Eye Blink Detection using Facial Landmarks"](http://vision.fe.uni-lj.si/cvww2016/proceedings/papers/05.pdf) paper
 

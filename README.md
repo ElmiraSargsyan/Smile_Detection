@@ -1,14 +1,11 @@
 # SmileDetection
 The `smile_detection.py` script turns on the web cam, detects the human face and automatically takes a picture when the person is smiling and his/her both eyes are open. 
 
-For understanding whether the person is smiling or not firstly needed to localize face and mouth on it.
+For understanding whether the person is smiling or not firstly is needed to localize face and find mouth on it.
 
 
-
-
-`Haar cascades` is used as a facial landmark detector. The pretrained model is included in the dlib library  
-This model returns 68 essential coordinates of the face \
-these coordinates are visualized in the following figure
+`Haar cascades` is used as a facial landmark detector. The pretrained model is included in the `dlib` library  
+This model returns 68 coordinates of the face essential points, visualized in the following figure
 
 <p align="center">
 <img src="Images/facial_landmarks_68markup.jpg" alt="facial landmarks" width="500" class="center"/> 

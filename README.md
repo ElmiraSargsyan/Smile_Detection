@@ -1,23 +1,14 @@
 # SmileDetection
-The script turns on the web cam, detects the human face and automatically takes a picture when the person is smiling and his/her both eyes are open. 
+The `smile_detection.py` script turns on the web cam, detects the human face and automatically takes a picture when the person is smiling and his/her both eyes are open. 
 
-Dlib is not compatible with python 3.7
- none of the .whl file were compatible with 3.7
- 
- 
-Step #1: Localize the face in the image.
+For understanding whether the person is smiling or not firstly needed to localize face and mouth on it.
 
-Step #2: Detect the key facial structures on the face ROI.
-	Mouth
-	Right eyebrow
-	Left eyebrow
-	Right eye
-	Left eye
-	Nose
-	Jaw
 
-The facial landmark detector included in the dlib library  which uses pretrained regression trees
 
+
+`Haar cascades` is used as a facial landmark detector. The pretrained model is included in the dlib library  
+This model returns 68 essential coordinates of the face \
+these coordinates are visualized in the following figure
 
 <p align="center">
 <img src="Images/facial_landmarks_68markup.jpg" alt="facial landmarks" width="500" class="center"/> 
@@ -44,20 +35,18 @@ besides the fact that the distance is increasing, the mentioned points move litt
 Consequentely for detecting whether person is smiling or not I used the following key indicator. 
 
 
-Let's suppose \
-- `a1` is the midpoint of 49th and 55th landmark points  \
-- `a2` is the midpoint of 6 mouth landmarks of the center of the mouth (62, 63, 64, 66, 67, 68)  \
+Let's suppose 
+- `a1` is the midpoint of 49th and 55th landmark points  
+- `a2` is the midpoint of 6 mouth landmarks of the center of the mouth (62, 63, 64, 66, 67, 68)  
 - `n` is one of the points on the nose, particularly, I set n equal to the 34th point   
 	
 	
 <p align="center">
-<img src="Images/mouth_and_nose.jpg" alt="mouth and nose landmarks" width="400" class="center"/> 
+<img src="Images/mouth_and_nose.jpg" alt="mouth and nose landmarks" width="300" class="center"/> 
 </p>
 
-if the ditance between `a1` and `n` is greater than the distance between `a2` and `b`, person is smiling. \
-in `detect_smile()` function threshold is added for higher accuracy
-
-
+if the ditance between `a1` and `n` is greater than the distance between `a2` and `n`, person is smiling. \
+in `detect_smile()` function threshold is added for higher accuracy.
 
 ____
 ### Checking eyes
@@ -72,3 +61,14 @@ For checking the eyes are open or not I used Eye Aspect Ratio(EAR) from the ["Re
 </p>
 
 If the eye is open EAT is relatively constant over time and is larger than when eye is closed, in this case EAT is more closer to zero.
+
+If EAT of the detected eye is lower than the given threshold, the eye is closed or partly open. \
+By default threshold is set to 0.2.
+
+____
+
+The script loops over the frames of the videostream and for every frame checkes for smile and opened eyes. \
+If requirements are satisfied for 15 frames in sequence, the selfie will be automatically captured and windows closed. 
+
+The videostream also stops if `q` key is pressed.
+

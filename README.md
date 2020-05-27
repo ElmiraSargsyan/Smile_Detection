@@ -46,7 +46,7 @@ Let's suppose
 </p>
 
 if the ditance between `a1` and `n` is greater than the distance between `a2` and `n`, person is smiling. \
-in `detect_smile()` function threshold is added for higher accuracy.
+in the `detect_smile()` function threshold is added for higher accuracy.
 
 ____
 ### Checking eyes
@@ -68,7 +68,7 @@ By default threshold is set to 0.2.
 ____
 
 The script loops over the frames of the videostream and for every frame checkes for smile and opened eyes. \
-If requirements are satisfied for 15 frames in sequence, the selfie will be automatically captured and windows closed. 
+If requirements are satisfied for 15 frames in sequence, the selfie will be automatically captured, saved and windows closed. 
 
 The videostream also stops if `q` key is pressed.
 

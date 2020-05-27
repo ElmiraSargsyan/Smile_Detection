@@ -44,17 +44,17 @@ besides the fact that the distance is increasing, the mentioned points move litt
 Consequentely for detecting whether person is smiling or not I used the following key indicator. 
 
 
-Let's suppose 
-	`a1` is the midpoint of 49th and 55th landmark points
-	`a2` is the midpoint of 6 mouth landmarks of the center of the mouth (62, 63, 64, 66, 67, 68)
-	`n` is one of the points on the nose, particularly, I set n equal to the 34th point  
+Let's suppose \
+	`a1` is the midpoint of 49th and 55th landmark points  \
+	`a2` is the midpoint of 6 mouth landmarks of the center of the mouth (62, 63, 64, 66, 67, 68)  \
+	`n` is one of the points on the nose, particularly, I set n equal to the 34th point   \
 	
 	
 <p align="center">
 <img src="Images/mouth_and_nose.jpg" alt="mouth and nose landmarks" width="500" class="center"/> 
 </p>
 
-if the ditance between `a1` and `n` is greater than the distance between `a2` and `b`, person is smiling.
+if the ditance between `a1` and `n` is greater than the distance between `a2` and `b`, person is smiling. \
 in `detect_smile()` function threshold is added for higher accuracy
 
 

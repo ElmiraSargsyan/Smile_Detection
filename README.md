@@ -46,4 +46,10 @@ For detecting whether person is smiling or not for every frame Mouth Aspect Rati
 
 
 
+For checking the eyes are open or not I used Eye Aspect Ratio(EAR) from the [Real-Time Eye Blink Detection using Facial Landmarks](http://vision.fe.uni-lj.si/cvww2016/proceedings/papers/05.pdf) paper
+
+ 
+![formula](https://render.githubusercontent.com/render/math?math=EAT=\frac{||p_2-p_6||%2B||p_3-p_5||}{2||p_1-p_4||})
+
+
 

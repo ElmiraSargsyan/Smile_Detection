@@ -1,4 +1,4 @@
-# SmileDetection
+# Smile Detection
 The `smile_detection.py` script turns on the web cam, detects the human face and automatically takes a picture when the person is smiling and his/her both eyes are open. 
 
 For understanding whether the person is smiling or not firstly is needed to localize face and find mouth on it.

@@ -51,5 +51,7 @@ For checking the eyes are open or not I used Eye Aspect Ratio(EAR) from the [Rea
  
 ![formula](https://render.githubusercontent.com/render/math?math=EAT=\frac{||p_2-p_6||%2B||p_3-p_5||}{2||p_1-p_4||})
 
-
+<p align="center">
+<img src="Images/EAR.png" alt="mouth landmarks" width="400" class="center"/> 
+</p>
 
